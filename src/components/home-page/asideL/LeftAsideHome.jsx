@@ -7,7 +7,7 @@ import FooterAside from "./asideL-components/FooterAside";
 
 export default function LeftAsideHome() {
   return (
-    <aside className=" border border-black flex flex-col gap-4">
+    <aside className="  flex flex-col gap-4">
       <HomeLinks />
       <OtherLinks />
       <SocialAside />
