@@ -1,6 +1,6 @@
-import LeftAsideHome from "./LeftAsideHome";
-import RightAsideHome from "./RightAsideHome";
-import SectionPost from "./SectionPost";
+import LeftAsideHome from "./asideL/LeftAsideHome";
+import RightAsideHome from "./asideR/RightAsideHome";
+import SectionPost from "./posts-section/SectionPost";
 
 export default function Home() {
   return (
