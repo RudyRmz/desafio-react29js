@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <nav className=" bg-white flex w-full justify-around items-center px-4 h-14">
+    <nav className=" bg-white flex w-full justify-around items-center px-4 h-14 sticky">
       <div className=" flex items-center gap-5">
         <img
           className=" w-14"
