@@ -11,10 +11,17 @@ export default function SectionPostRelevant() {
       .then((data) => setPosts(data.data));
   }, []);
   //console.log(posts);
+
+  let postToLatest = [
+    ...posts.sort(function (a, b) {
+      return b.dateMiliseconds - a.dateMiliseconds;
+    }),
+  ];
+
   return (
     <section className="">
       <ButtonGroup route={"latest"} />
-      {posts.map((post) => {
+      {postToLatest.map((post) => {
         return (
           <PostHome
             key={post._id}
