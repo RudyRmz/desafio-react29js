@@ -1,4 +1,3 @@
-// import HomeLinks from "./asideL-components/homeLinks";
 import OtherLinks from "./asideL-components/OtherLinks";
 import SocialAside from "./asideL-components/SocialAside";
 import TagsAside from "./asideL-components/TagsAside";
@@ -9,7 +8,6 @@ import LinksAside from "./asideL-components/LinksAside";
 export default function LeftAsideHome() {
   return (
     <aside className="  flex flex-col gap-4">
-      {/* <HomeLinks /> */}
       <LinksAside />
       <OtherLinks />
       <SocialAside />
