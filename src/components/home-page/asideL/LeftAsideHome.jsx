@@ -1,4 +1,4 @@
-import HomeLinks from "./asideL-components/homeLinks";
+// import HomeLinks from "./asideL-components/homeLinks";
 import OtherLinks from "./asideL-components/OtherLinks";
 import SocialAside from "./asideL-components/SocialAside";
 import TagsAside from "./asideL-components/TagsAside";
@@ -8,7 +8,7 @@ import FooterAside from "./asideL-components/FooterAside";
 export default function LeftAsideHome() {
   return (
     <aside className="  flex flex-col gap-4">
-      <HomeLinks />
+      {/* <HomeLinks /> */}
       <OtherLinks />
       <SocialAside />
       <TagsAside />
