@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <nav className=" bg-white flex w-full justify-around items-center px-4 h-14 sticky">
+    <nav className=" bg-white flex w-full justify-around items-center px-4 h-14 sticky top-0 ">
       <div className=" flex items-center gap-5">
         <img
           className=" w-14"
@@ -9,7 +9,7 @@ export default function NavBar() {
         />
         <div className="flex  items-center">
           <input
-            className=" border border-[#d4d4d4] w-96 h-10 p-2 rounded-l-lg"
+            className=" border border-[#d4d4d4] w-96 h-10 p-2 rounded-l-lg outline-[#3b49df]"
             type="text"
             name=""
             id=""

@@ -2,7 +2,7 @@ import ButtonGroup from "./sectionposts-components/ButtonGroup";
 import PostHome from "./sectionposts-components/PostHome";
 import { useEffect, useState } from "react";
 
-export default function SectionPost() {
+export default function SectionPostRelevant() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function SectionPost() {
   //console.log(posts);
   return (
     <section className="">
-      <ButtonGroup />
+      <ButtonGroup route={"top"} />
       {posts.map((post) => {
         return (
           <PostHome
