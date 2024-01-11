@@ -1,7 +1,11 @@
+import ButtonGroup from "./sectionposts-components/ButtonGroup";
+import PostHome from "./sectionposts-components/PostHome";
+
 export default function SectionPost() {
   return (
-    <section className=" bg-blue-400">
-      <div>Seccion de posts</div>
+    <section className="">
+      <ButtonGroup />
+      <PostHome />
     </section>
   );
 }
