@@ -10,11 +10,17 @@ export default function SectionPostRelevant() {
       .then((response) => response.json())
       .then((data) => setPosts(data.data));
   }, []);
-  //console.log(posts);
+
+  let postToTop = [
+    ...posts.sort(function (a, b) {
+      return b.reactions - a.reactions;
+    }),
+  ];
+
   return (
     <section className="">
       <ButtonGroup route={"top"} />
-      {posts.map((post) => {
+      {postToTop.map((post) => {
         return (
           <PostHome
             key={post._id}
