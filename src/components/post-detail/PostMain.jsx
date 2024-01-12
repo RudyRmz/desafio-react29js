@@ -27,7 +27,7 @@ export default function PostHome({ img, date, reactions, title, tags }) {
             <img src="./src/assets/raised-hands.svg" alt="" />
             <img src="./src/assets/fire.svg" alt="" />
           </div>
-          <a className=" font-bold text-4xl">
+          <a className=" font-extrabold text-5xl">
             How to get started with Progressive Web Apps.
           </a>
           <ul className=" flex">
