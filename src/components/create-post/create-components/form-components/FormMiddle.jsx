@@ -1,6 +1,6 @@
 export default function FormMiddle() {
   return (
-    <div className=" bg-[#f5f5f5] w-full h-14 flex items-center">
+    <div className=" bg-[#f9f9f9] w-full h-14 flex items-center">
       <div className="flex justify-between my-2 mx-16">
         <div className=" flex gap-2">
           <img className=" p-2" src="./src/assets/bold.svg" alt="" />
