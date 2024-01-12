@@ -1,4 +1,12 @@
+import { Link, Outlet, useNavigate } from "react-router-dom";
+
 export default function NavBar() {
+  const navigate = useNavigate();
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token");
+  //   navigate("/login");
+  // };
+
   return (
     <nav className=" bg-white flex w-full justify-around items-center px-4 h-14 sticky top-0 ">
       <div className=" flex items-center gap-5">
@@ -21,7 +29,12 @@ export default function NavBar() {
         </div>
       </div>
       <div className=" flex items-center gap-3">
-        <button className=" font-semibold border border-[#3b49df] text-[#3b49df] py-2 px-4 rounded-lg">
+        <button
+          onClick={() => {
+            navigate("/new");
+          }}
+          className=" font-semibold border border-[#3b49df] text-[#3b49df] py-2 px-4 rounded-lg"
+        >
           Create Post
         </button>
         <img src="./src/assets/notification.svg" alt="" />
