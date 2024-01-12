@@ -1,6 +1,6 @@
 export default function AsideLPost() {
   return (
-    <aside className=" flex flex-col items-center gap-1 pt-7 border border-black">
+    <aside className=" flex flex-col items-center gap-1 pt-7">
       <button className=" p-2 w">
         <img src="./src/assets/corazon.svg" alt="" />
         <span>47</span>
