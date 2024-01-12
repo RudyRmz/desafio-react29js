@@ -8,7 +8,7 @@ export default function NavBar() {
   // };
 
   return (
-    <nav className=" bg-white flex w-full justify-around items-center px-4 h-14 sticky top-0 ">
+    <nav className=" bg-white border border-b-[#cfd2d5] flex w-full justify-around items-center px-4 h-14 sticky top-0 ">
       <div className=" flex items-center gap-5">
         <img
           className=" w-14"

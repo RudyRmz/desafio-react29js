@@ -4,6 +4,7 @@ import PostRelevant from "../components/home-page/posts-section/PostRelevant";
 import PostLatest from "../components/home-page/posts-section/PostLatest";
 import PostTop from "../components/home-page/posts-section/PostTop";
 import CreatePost from "../components/create-post/CreatePost";
+import PostDetail from "../components/post-detail/PostDetail";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/new",
     element: <CreatePost />,
+  },
+  {
+    path: "/post-detail",
+    element: <PostDetail />,
   },
 ]);
 

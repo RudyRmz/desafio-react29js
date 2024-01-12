@@ -12,12 +12,14 @@ export default function FormCreatePost() {
             <input
               className=" border border-[#d4d4d4] rounded-r-lg outline-none w-96"
               type="text"
+              required
             />
           </div>
           <textarea
             type="text"
             placeholder="New post title here..."
             className=" text-5xl font-bold w-full h-16 resize-none outline-none"
+            required
           />
           <select name="tags" id="tags" required>
             <option value="" disabled selected hidden>
@@ -34,8 +36,9 @@ export default function FormCreatePost() {
         <section className="px-16 py-8 border bg-white border-[#d4d4d4] border-t-0 rounded-b-lg">
           <textarea
             type="text"
-            placeholder="New post title here..."
+            placeholder="Write your post content here..."
             className=" w-full h-96 resize-none outline-none"
+            required
           />
         </section>
         <section className=" flex gap-2 mt-4">
