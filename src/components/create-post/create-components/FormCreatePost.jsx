@@ -1,9 +1,25 @@
 import FormMiddle from "./form-components/FormMiddle";
+import { useForm } from "react-hook-form";
 
 export default function FormCreatePost() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const handleClearClick = () => {
+    reset();
+  };
+
+  const handleSubmitForm = (data) => {
+    console.log(data);
+  };
+
   return (
     <>
-      <form className="">
+      <form onSubmit={handleSubmit(handleSubmitForm)}>
         <section className="px-16 py-8 border border-[#d4d4d4] border-b-0 bg-white rounded-t-lg">
           <div className=" flex mb-5">
             <p className=" px-3 py-2 border bg-[#f5f5f5] border-[#d4d4d4] rounded-l-lg">
@@ -12,6 +28,7 @@ export default function FormCreatePost() {
             <input
               className=" border border-[#d4d4d4] rounded-r-lg outline-none w-96"
               type="text"
+              {...register("url", { required: true })}
               required
             />
           </div>
@@ -20,8 +37,9 @@ export default function FormCreatePost() {
             placeholder="New post title here..."
             className=" text-5xl font-bold w-full h-16 resize-none outline-none"
             required
+            {...register("title", { required: true })}
           />
-          <select name="tags" id="tags" required>
+          {/* <select name="tags" id="tags" required>
             <option value="" disabled selected hidden>
               Add up to 4 tags...
             </option>
@@ -30,7 +48,7 @@ export default function FormCreatePost() {
             <option value="tag3">Tag 3</option>
             <option value="tag4">Tag 4</option>
             <option value="tag5">Tag 5</option>
-          </select>
+          </select> */}
         </section>
         <FormMiddle />
         <section className="px-16 py-8 border bg-white border-[#d4d4d4] border-t-0 rounded-b-lg">
@@ -39,6 +57,7 @@ export default function FormCreatePost() {
             placeholder="Write your post content here..."
             className=" w-full h-96 resize-none outline-none"
             required
+            {...register("description", { required: true })}
           />
         </section>
         <section className=" flex gap-2 mt-4">
@@ -50,7 +69,9 @@ export default function FormCreatePost() {
           </button>
           <button type="button">Save draft</button>
           <img src="./src/assets/opciones.svg" alt="" />
-          <button type="button">Revert new changues</button>
+          <button type="button" onClick={handleClearClick}>
+            Revert new changues
+          </button>
         </section>
       </form>
     </>
