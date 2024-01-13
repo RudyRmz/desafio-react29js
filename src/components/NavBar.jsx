@@ -27,11 +27,17 @@ export default function NavBar() {
   return (
     <nav className=" bg-white border border-b-[#cfd2d5] flex w-full justify-around items-center px-4 h-14 sticky top-0 ">
       <div className=" flex items-center gap-5">
-        <img
-          className=" w-14"
-          src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
-          alt=""
-        />
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <img
+            className=" w-14"
+            src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+            alt=""
+          />
+        </button>
         <div className="flex  items-center">
           <input
             className=" border border-[#d4d4d4] w-96 h-10 p-2 rounded-l-lg outline-[#3b49df]"
@@ -56,7 +62,7 @@ export default function NavBar() {
         </button>
         <button
           onClick={() => {
-            navigate("/new");
+            navigate("/new-user");
           }}
           className={`font-semibold border border-[#3b49df] text-[#3b49df] py-2 px-4 rounded-lg ${
             token ? `hidden` : ` `
