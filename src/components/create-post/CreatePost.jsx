@@ -1,8 +1,20 @@
 import NavCreate from "./create-components/NavCreate";
 import FormCreatePost from "./create-components/FormCreatePost";
 import AsideInfo from "./create-components/AsideInfo";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function CreatePost() {
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+  });
+
   return (
     <>
       <NavCreate />
