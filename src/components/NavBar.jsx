@@ -31,15 +31,30 @@ export default function NavBar() {
       <div className=" flex items-center gap-3">
         <button
           onClick={() => {
+            navigate("/login");
+          }}
+        >
+          Login
+        </button>
+        <button
+          onClick={() => {
             navigate("/new");
           }}
           className=" font-semibold border border-[#3b49df] text-[#3b49df] py-2 px-4 rounded-lg"
         >
+          Create account
+        </button>
+        <button
+          onClick={() => {
+            navigate("/new");
+          }}
+          className=" hidden font-semibold border border-[#3b49df] text-[#3b49df] py-2 px-4 rounded-lg"
+        >
           Create Post
         </button>
-        <img src="./src/assets/notification.svg" alt="" />
+        <img className="hidden" src="./src/assets/notification.svg" alt="" />
         <img
-          className=" w-10 rounded-full"
+          className=" w-10 rounded-full hidden"
           src="https://res.cloudinary.com/practicaldev/image/fetch/s--kPDUUZZY--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1133362/a751b647-f244-49b6-9208-18e96c9a25d3.jpeg"
           alt=""
         />

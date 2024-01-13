@@ -1,4 +1,33 @@
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
 export default function EnterLogin() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const navigate = useNavigate();
+
+  async function onSubmit(data) {
+    const response = await fetch("http://localhost:3002/auth//login/", {
+      method: "POST",
+      body: JSON.stringify({
+        email: data.email,
+        password: data.password,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    const responseData = await response.json();
+    console.log(responseData);
+
+    if (responseData?.token) {
+      localStorage.setItem("token", responseData.token);
+      navigate("/");
+    }
+  }
+
   return (
     <main className=" flex flex-col items-center h-screen m-0 justify-center">
       <div>
@@ -39,16 +68,21 @@ export default function EnterLogin() {
           <div className="d-flex justify-content-center mt-2">
             <p>OR</p>
           </div>
-          <form className=" flex flex-col w-full gap-1">
+          <form
+            className=" flex flex-col w-full gap-1"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <span className=" font-semibold">Email</span>
             <input
               type="text"
               className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
               required
+              {...register("email", { required: true })}
             />
             <span className=" font-semibold">Password</span>
             <input
               type="password"
+              {...register("password", { required: true })}
               className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
             />
 
