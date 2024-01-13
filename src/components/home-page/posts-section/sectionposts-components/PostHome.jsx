@@ -1,4 +1,17 @@
-export default function PostHome({ img, date, reactions, title, tags }) {
+export default function PostHome({
+  img,
+  date,
+  reactions,
+  title,
+  tags,
+  onEventClick,
+  id,
+}) {
+  const handleSeePost = (evt) => {
+    evt.stopPropagation();
+    onEventClick(id);
+    //console.log("diste click al boton");
+  };
   return (
     <article className=" border border-[#d4d4d4] bg-white rounded-lg overflow-hidden mb-2">
       <img className=" w-full max-h-64 " src={img} alt="" />
@@ -16,7 +29,12 @@ export default function PostHome({ img, date, reactions, title, tags }) {
           </div>
         </div>
         <div className=" pl-10 flex flex-col gap-4">
-          <a className=" font-bold text-4xl">{title}</a>
+          <a
+            className=" font-bold text-4xl cursor-pointer"
+            onClick={handleSeePost}
+          >
+            {title}
+          </a>
           <ul className=" flex">
             <li className=" py-1 px-2">#webdev</li>
             <li className=" py-1 px-2">#github</li>

@@ -2,7 +2,6 @@ import NavBar from "../NavBar";
 import AsideLPost from "./AsideLPost";
 import AsideRPost from "./AsideRPost";
 import PostMain from "./PostMain";
-import { useEffect, useState } from "react";
 
 export default function PostDetail() {
   return (
