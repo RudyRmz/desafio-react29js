@@ -17,13 +17,25 @@ export default function FormCreatePost() {
     console.log(data);
   };
 
+  const dateNow = new Date();
+  const dateNowString = dateNow.toDateString();
+  const tiempoEnMilisegundos = dateNow.getTime();
+  let randomNumber = Math.floor(Math.random() * 50);
+
   async function onSubmit(data) {
     const response = await fetch("http://localhost:3002/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        title: data.title,
+        url: data.url,
+        description: data.description,
+        date: dateNowString,
+        dateMiliseconds: tiempoEnMilisegundos,
+        reactions: randomNumber,
+      }),
     });
     const result = await response.json();
     console.log(result);
