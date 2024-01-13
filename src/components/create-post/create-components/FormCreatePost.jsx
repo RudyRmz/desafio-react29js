@@ -17,9 +17,21 @@ export default function FormCreatePost() {
     console.log(data);
   };
 
+  async function onSubmit(data) {
+    const response = await fetch("http://localhost:3002/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    console.log(result);
+  }
+
   return (
     <>
-      <form onSubmit={handleSubmit(handleSubmitForm)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <section className="px-16 py-8 border border-[#d4d4d4] border-b-0 bg-white rounded-t-lg">
           <div className=" flex mb-5">
             <p className=" px-3 py-2 border bg-[#f5f5f5] border-[#d4d4d4] rounded-l-lg">
