@@ -5,6 +5,7 @@ import PostLatest from "../components/home-page/posts-section/PostLatest";
 import PostTop from "../components/home-page/posts-section/PostTop";
 import CreatePost from "../components/create-post/CreatePost";
 import PostDetail from "../components/post-detail/PostDetail";
+import EnterLogin from "../components/login/EnterLogin";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/post-detail/:postId",
     element: <PostDetail />,
+  },
+  {
+    path: "/login",
+    element: <EnterLogin />,
   },
 ]);
 
