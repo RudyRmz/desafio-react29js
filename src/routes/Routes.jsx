@@ -7,6 +7,7 @@ import CreatePost from "../components/create-post/CreatePost";
 import PostDetail from "../components/post-detail/PostDetail";
 import EnterLogin from "../components/login/EnterLogin";
 import Error404 from "../components/Error404";
+import CreateAccount from "../components/create-account/CreateAccount";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <EnterLogin />,
+  },
+  {
+    path: "/new-user",
+    element: <CreateAccount />,
   },
 ]);
 

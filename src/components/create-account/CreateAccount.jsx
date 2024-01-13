@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-export default function EnterLogin() {
+export default function CreateAccount() {
   const {
     register,
     handleSubmit,
@@ -11,9 +11,12 @@ export default function EnterLogin() {
   const navigate = useNavigate();
 
   async function onSubmit(data) {
-    const response = await fetch("http://localhost:3002/auth//login/", {
+    const response = await fetch("http://localhost:3002/users/", {
       method: "POST",
       body: JSON.stringify({
+        avatar: data.avatar,
+        name: data.name,
+        user_name: data.user_name,
         email: data.email,
         password: data.password,
       }),
@@ -22,9 +25,8 @@ export default function EnterLogin() {
     const responseData = await response.json();
     console.log(responseData);
 
-    if (responseData?.token) {
-      localStorage.setItem("token", responseData.token);
-      navigate("/");
+    if (responseData) {
+      navigate("/login");
     }
   }
 
@@ -43,45 +45,39 @@ export default function EnterLogin() {
               className=" w-[50px] h-[40px] cursor-pointer"
             />
           </a>
-          <h2 className=" font-bold text-3xl">Join the DEV Community</h2>
+          <h2 className=" font-bold text-3xl">Create Account</h2>
           <p>DEV Community is a community of 1,187,414 amazing developers</p>
-          <button
-            className=" border border-[#d4d4d4] w-full p-3 rounded-md"
-            type="button"
-          >
-            <img src="/src/apple.svg" alt="" /> Continue with Apple{" "}
-          </button>
-          <button
-            className=" border border-[#d4d4d4] w-full p-3 rounded-md"
-            type="button"
-          >
-            <img src="/src/forem.svg" alt="" /> Continue with Forem{" "}
-          </button>
-          <button
-            className=" border border-[#d4d4d4] w-full p-3 rounded-md"
-            type="button"
-          >
-            <img src="/src/github2.svg" alt="" /> Continue with GitHub{" "}
-          </button>
-          <button
-            className=" border border-[#d4d4d4] w-full p-3 rounded-md"
-            type="button"
-          >
-            <img src="/src/twitter.svg" alt="" /> Continue with Twitter{" "}
-          </button>
-          <div className="d-flex justify-content-center mt-2">
-            <p>OR</p>
-          </div>
+
           <form
             className=" flex flex-col w-full gap-1"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <span className=" font-semibold">Email</span>
+            <span className=" font-semibold">
+              Profile image (add URL image)
+            </span>
             <input
               type="text"
               className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
               required
+              {...register("avatar", { required: true })}
+            />
+            <span className=" font-semibold">Name</span>
+            <input
+              type="text"
+              {...register("name", { required: true })}
+              className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
+            />
+            <span className=" font-semibold">Username</span>
+            <input
+              type="text"
+              {...register("user_name", { required: true })}
+              className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
+            />
+            <span className=" font-semibold">Email</span>
+            <input
+              type="email"
               {...register("email", { required: true })}
+              className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
             />
             <span className=" font-semibold">Password</span>
             <input
@@ -89,28 +85,20 @@ export default function EnterLogin() {
               {...register("password", { required: true })}
               className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
             />
+            <span className=" font-semibold">Password confirmation</span>
+            <input
+              type="password"
+              required
+              className=" border border-[#d4d4d4] w-full p-2 rounded-md outline-[#3b49df]"
+            />
 
-            <div className=" flex justify-between">
-              <div className=" flex gap-2">
-                <input type="checkbox" defaultValue="" />
-                <label className="form-check-label" htmlFor="flexCheckDefault">
-                  Remember me
-                </label>
-              </div>
-              <a
-                className="link-offset-2 link-underline link-underline-opacity-0"
-                href="#"
-              >
-                Forgot password?
-              </a>
-            </div>
-            <div>
+            <div className=" pt-7">
               <button
                 className=" bg-[#3b49df] w-full text-white font-semibold p-3 rounded-md"
                 type="submit"
                 id="login_button"
               >
-                Log in
+                Sign Up
               </button>
             </div>
           </form>
@@ -140,16 +128,6 @@ export default function EnterLogin() {
             </a>
             .
           </span>
-          <p>
-            New to DEV Community?{" "}
-            <a
-              className="link-offset-2 link-underline link-underline-opacity-0"
-              href="../new_user/new_user.html"
-            >
-              Create account
-            </a>
-            .
-          </p>
         </div>
       </div>
     </main>
