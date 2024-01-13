@@ -1,12 +1,28 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+//console.log(payloadObject);
 
 export default function NavBar() {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
+  const tokenObjet = () => {
+    if (token) {
+      const [encodedHeader, encodedPayload, encodedSignature] =
+        token.split(".");
+      const decodedPayload = atob(encodedPayload);
+      const payloadObject = JSON.parse(decodedPayload);
+      return payloadObject;
+    }
+  };
+
+  //console.log(tokenObjet().avatar);
+
   // const handleLogout = () => {
   //   localStorage.removeItem("token");
   //   navigate("/login");
   // };
-  const token = localStorage.getItem("token");
 
   return (
     <nav className=" bg-white border border-b-[#cfd2d5] flex w-full justify-around items-center px-4 h-14 sticky top-0 ">
@@ -65,7 +81,7 @@ export default function NavBar() {
         />
         <img
           className={`${token ? "" : "hidden"} w-10 rounded-full`}
-          src="https://res.cloudinary.com/practicaldev/image/fetch/s--kPDUUZZY--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1133362/a751b647-f244-49b6-9208-18e96c9a25d3.jpeg"
+          src={tokenObjet()?.avatar}
           alt=""
         />
       </div>
