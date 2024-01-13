@@ -6,11 +6,13 @@ import PostTop from "../components/home-page/posts-section/PostTop";
 import CreatePost from "../components/create-post/CreatePost";
 import PostDetail from "../components/post-detail/PostDetail";
 import EnterLogin from "../components/login/EnterLogin";
+import Error404 from "../components/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <Error404 />,
     children: [
       {
         path: "/",
