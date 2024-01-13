@@ -1,8 +1,10 @@
+import homeIcon from "./../../../../assets/home.svg";
+
 export default function LinksAside() {
   return (
     <ul className=" flex flex-col gap-3 pl-2">
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/home.svg" alt="" />
+        <img src={homeIcon} alt="" />
         <span>Home</span>
       </li>
       <li className=" flex items-center gap-1">
