@@ -1,6 +1,7 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PopOver from "./PopOver";
+import search from "./../../../../assets/search.svg";
 
 //console.log(payloadObject);
 
@@ -48,7 +49,7 @@ export default function NavBar() {
             placeholder="Search..."
           />
           <button className=" h-10 border p-2 rounded-r-lg">
-            <img src="./src/assets/search.svg" alt="" />
+            <img src={search} alt="" />
           </button>
         </div>
       </div>
