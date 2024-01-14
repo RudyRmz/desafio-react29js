@@ -1,3 +1,11 @@
+import heart from "./../../../../assets/heart.svg";
+import unicorn from "./../../../../assets/unicorn.svg";
+import exploding from "./../../../../assets/exploding-head.svg";
+import hands from "./../../../../assets/raised-hands.svg";
+import fire from "./../../../../assets/fire.svg";
+import comments from "./../../../../assets/comments.svg";
+import bookmark from "./../../../../assets/bookmark.svg";
+
 export default function PostHome({
   img,
   date,
@@ -42,21 +50,21 @@ export default function PostHome({
           <div className=" flex justify-between">
             <div className=" flex gap-2">
               <div className=" flex ">
-                <img src="./src/assets/heart.svg" alt="" />
-                <img src="./src/assets/unicorn.svg" alt="" />
-                <img src="./src/assets/exploding-head.svg" alt="" />
-                <img src="./src/assets/raised-hands.svg" alt="" />
-                <img src="./src/assets/fire.svg" alt="" />
+                <img src={heart} alt="" />
+                <img src={unicorn} alt="" />
+                <img src={exploding} alt="" />
+                <img src={hands} alt="" />
+                <img src={fire} alt="" />
                 <p className=" pl-1">{`${reactions} reactions`}</p>
               </div>
               <div className=" flex items-center">
-                <img src="./src/assets/comments.svg" alt="" />
+                <img src={comments} alt="" />
                 <p>2 comments</p>
               </div>
             </div>
             <div className=" flex items-center">
               <p>10 min read</p>
-              <img src="./src/assets/bookmark.svg" alt="" />
+              <img src={bookmark} alt="" />
             </div>
           </div>
         </div>
