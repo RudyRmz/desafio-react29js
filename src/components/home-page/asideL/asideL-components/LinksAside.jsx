@@ -1,4 +1,5 @@
 import homeIcon from "./../../../../assets/home.svg";
+import PopOver from "../../../nav-bar/PopOver";
 
 export default function LinksAside() {
   return (

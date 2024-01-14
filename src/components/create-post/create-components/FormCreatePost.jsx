@@ -2,6 +2,19 @@ import FormMiddle from "./form-components/FormMiddle";
 import { useForm } from "react-hook-form";
 
 export default function FormCreatePost() {
+  const token = localStorage.getItem("token");
+
+  const tokenObjet = () => {
+    if (token) {
+      const [encodedHeader, encodedPayload, encodedSignature] =
+        token.split(".");
+      const decodedPayload = atob(encodedPayload);
+      const payloadObject = JSON.parse(decodedPayload);
+      return payloadObject;
+    }
+  };
+
+  console.log(tokenObjet());
   const {
     register,
     handleSubmit,
@@ -35,6 +48,8 @@ export default function FormCreatePost() {
         date: dateNowString,
         dateMiliseconds: tiempoEnMilisegundos,
         reactions: randomNumber,
+        user: tokenObjet()?.name,
+        avatar: tokenObjet()?.avatar,
       }),
     });
     const result = await response.json();

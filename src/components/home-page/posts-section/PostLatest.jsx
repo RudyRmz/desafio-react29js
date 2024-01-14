@@ -38,6 +38,8 @@ export default function SectionPostRelevant() {
             tags={post.tags}
             onEventClick={handleEventItemClick}
             id={post._id}
+            name={post.user}
+            avatar={post.avatar}
           />
         );
       })}

@@ -1,4 +1,4 @@
-import NavBar from "../NavBar";
+import NavBar from "../nav-bar/NavBar";
 import AsideLPost from "./AsideLPost";
 import AsideRPost from "./AsideRPost";
 import PostMain from "./PostMain";

@@ -1,5 +1,6 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import PopOver from "./PopOver";
 
 //console.log(payloadObject);
 
@@ -17,7 +18,7 @@ export default function NavBar() {
     }
   };
 
-  //console.log(tokenObjet().avatar);
+  //console.log(tokenObjet());
 
   // const handleLogout = () => {
   //   localStorage.removeItem("token");
@@ -85,10 +86,15 @@ export default function NavBar() {
           src="./src/assets/notification.svg"
           alt=""
         />
-        <img
+        {/* <img
           className={`${token ? "" : "hidden"} w-10 rounded-full`}
           src={tokenObjet()?.avatar}
           alt=""
+        /> */}
+        <PopOver
+          avatar={tokenObjet()?.avatar}
+          username={tokenObjet()?.user_name}
+          name={tokenObjet()?.name}
         />
       </div>
     </nav>

@@ -1,7 +1,7 @@
 import LeftAsideHome from "./asideL/LeftAsideHome";
 import RightAsideHome from "./asideR/RightAsideHome";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import NavBar from "../NavBar";
+import NavBar from "../nav-bar/NavBar";
 
 export default function Home() {
   return (

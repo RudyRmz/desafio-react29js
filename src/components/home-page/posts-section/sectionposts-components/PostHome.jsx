@@ -6,6 +6,8 @@ export default function PostHome({
   tags,
   onEventClick,
   id,
+  name,
+  avatar,
 }) {
   const handleSeePost = (evt) => {
     evt.stopPropagation();
@@ -18,13 +20,9 @@ export default function PostHome({
 
       <div className=" p-5">
         <div className=" flex items-center">
-          <img
-            className=" w-8 h-8 rounded-full"
-            src="https://avatars.githubusercontent.com/u/126934315?v=4"
-            alt=""
-          />
+          <img className=" w-8 h-8 rounded-full" src={avatar} alt="" />
           <div className=" flex flex-col p-1">
-            <span className=" font-semibold">Rudy Ramírez</span>
+            <span className=" font-semibold">{name}</span>
             <span>{date}</span>
           </div>
         </div>
