@@ -1,4 +1,16 @@
 import homeIcon from "./../../../../assets/home.svg";
+import listings from "./../../../../assets/listings.svg";
+import podcasts from "./../../../../assets/podcasts.svg";
+import videos from "./../../../../assets/videos.svg";
+import tags from "./../../../../assets/tags.svg";
+import faq from "./../../../../assets/faq.svg";
+import foremShop from "./../../../../assets/forem-shop.svg";
+import advertise from "./../../../../assets/advertise-on-dev.svg";
+import about from "./../../../../assets/about.svg";
+import contact from "./../../../../assets/contact.svg";
+import guides from "./../../../../assets/guides.svg";
+import software from "./../../../../assets/software-comparisons.svg";
+
 import PopOver from "../../../nav-bar/PopOver";
 
 export default function LinksAside() {
@@ -9,47 +21,47 @@ export default function LinksAside() {
         <span>Home</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/listings.svg" alt="" />
+        <img src={listings} alt="" />
         <span>Listings</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/podcasts.svg" alt="" />
+        <img src={podcasts} alt="" />
         <span>Podcast</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/videos.svg" alt="" />
+        <img src={videos} alt="" />
         <span>Videos</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/tags.svg" alt="" />
+        <img src={tags} alt="" />
         <span>Tags</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/faq.svg" alt="" />
+        <img src={faq} alt="" />
         <span>FAQ</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/forem-shop.svg" alt="" />
+        <img src={foremShop} alt="" />
         <span>Forem Shop</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/advertise-on-dev.svg" alt="" />
+        <img src={advertise} alt="" />
         <span>Advertise on DEV</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/about.svg" alt="" />
+        <img src={about} alt="" />
         <span>About</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/contact.svg" alt="" />
+        <img src={contact} alt="" />
         <span>Contact</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/guides.svg" alt="" />
+        <img src={guides} alt="" />
         <span>Guides</span>
       </li>
       <li className=" flex items-center gap-1">
-        <img src="./src/assets/software-comparisons.svg" alt="" />
+        <img src={software} alt="" />
         <span>Software comparisons</span>
       </li>
     </ul>
