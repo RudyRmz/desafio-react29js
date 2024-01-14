@@ -1,9 +1,9 @@
-export default function MoreUser() {
+export default function MoreUser({ name }) {
   return (
     <section className=" ">
       <div className=" flex flex-col gap-3 py-3 px-2 bg-white  rounded-lg divide-y">
         <div className=" font-bold text-lg">
-          <h5>More From Rudy Ramírez</h5>
+          <h5>{`More from ${name}`}</h5>
         </div>
         <ul className="divide-y ">
           <li className=" py-3 ">

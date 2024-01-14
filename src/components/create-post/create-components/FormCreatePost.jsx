@@ -14,7 +14,7 @@ export default function FormCreatePost() {
     }
   };
 
-  console.log(tokenObjet());
+  //console.log(tokenObjet());
   const {
     register,
     handleSubmit,

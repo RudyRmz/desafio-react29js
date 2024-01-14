@@ -13,6 +13,8 @@ export default function PostHome({ img, date, reactions, title, tags }) {
       });
   }, []);
 
+  //console.log(post);
+
   return (
     <article className=" border border-[#d4d4d4] bg-white rounded-lg overflow-hidden mb-2">
       <img className=" w-full max-h-70 " src={post.data?.url} alt="" />
@@ -22,11 +24,11 @@ export default function PostHome({ img, date, reactions, title, tags }) {
           <div className=" flex items-center">
             <img
               className=" w-8 h-8 rounded-full"
-              src="https://avatars.githubusercontent.com/u/126934315?v=4"
+              src={post.data?.avatar}
               alt=""
             />
             <div className=" flex flex-col p-1">
-              <span className=" font-semibold">Rudy Ramírez</span>
+              <span className=" font-semibold">{post.data?.user}</span>
               <span>{post.data?.date}</span>
             </div>
           </div>

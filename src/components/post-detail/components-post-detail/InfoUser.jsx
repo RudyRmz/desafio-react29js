@@ -1,13 +1,10 @@
-export default function InfoUser() {
+export default function InfoUser({ name, avatar }) {
   return (
     <section className="info__user mt-3 bg-white rounded-lg">
       <div className=" border-t-[30px] border-[#010b1b] rounded-lg">
         <div className=" flex gap-3">
-          <img
-            src="https://res.cloudinary.com/practicaldev/image/fetch/s--kPDUUZZY--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1133362/a751b647-f244-49b6-9208-18e96c9a25d3.jpeg"
-            className=" w-12 h-12 -mt-5 rounded-full ml-4"
-          />
-          <h5 className=" text-lg font-bold">Rudy Ramírez</h5>
+          <img src={avatar} className=" w-12 h-12 -mt-5 rounded-full ml-4" />
+          <h5 className=" text-lg font-bold">{name}</h5>
         </div>
         <div className=" flex flex-col items-center pt-4 px-3">
           <button
