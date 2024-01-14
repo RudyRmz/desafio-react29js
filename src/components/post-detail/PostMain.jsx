@@ -1,3 +1,9 @@
+import heart from "./../../assets/heart.svg";
+import unicorn from "./../../assets/unicorn.svg";
+import exploding from "./../../assets/exploding-head.svg";
+import hands from "./../../assets/raised-hands.svg";
+import fire from "./../../assets/fire.svg";
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -33,11 +39,11 @@ export default function PostHome({ img, date, reactions, title, tags }) {
             </div>
           </div>
           <div className=" flex gap-4">
-            <img src="../src/assets/heart.svg" alt="" />
-            <img src="../src/assets/unicorn.svg" alt="" />
-            <img src="../src/assets/exploding-head.svg" alt="" />
-            <img src="../src/assets/raised-hands.svg" alt="" />
-            <img src="../src/assets/fire.svg" alt="" />
+            <img src={heart} alt="" />
+            <img src={unicorn} alt="" />
+            <img src={exploding} alt="" />
+            <img src={hands} alt="" />
+            <img src={fire} alt="" />
           </div>
           <a className=" font-extrabold text-5xl">{post.data?.title}</a>
           <ul className=" flex">

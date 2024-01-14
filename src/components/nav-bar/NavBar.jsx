@@ -1,7 +1,8 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PopOver from "./PopOver";
-import search from "./../../../../assets/search.svg";
+import search from "./../../assets/search.svg";
+import notification from "./../../assets/notification.svg";
 
 //console.log(payloadObject);
 
@@ -82,11 +83,7 @@ export default function NavBar() {
         >
           Create Post
         </button>
-        <img
-          className={token ? "" : "hidden"}
-          src="./src/assets/notification.svg"
-          alt=""
-        />
+        <img className={token ? "" : "hidden"} src={notification} alt="" />
         {/* <img
           className={`${token ? "" : "hidden"} w-10 rounded-full`}
           src={tokenObjet()?.avatar}
