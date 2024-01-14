@@ -1,5 +1,6 @@
 import FormMiddle from "./form-components/FormMiddle";
 import { useForm } from "react-hook-form";
+import opciones from "./../../../assets/opciones.svg";
 
 export default function FormCreatePost() {
   const token = localStorage.getItem("token");
@@ -107,7 +108,7 @@ export default function FormCreatePost() {
             Publish
           </button>
           <button type="button">Save draft</button>
-          <img src="./src/assets/opciones.svg" alt="" />
+          <img src={opciones} alt="" />
           <button type="button" onClick={handleClearClick}>
             Revert new changues
           </button>
