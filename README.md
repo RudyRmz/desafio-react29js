@@ -1,8 +1,26 @@
-# React + Vite
+###Desafío React Kodemia - Clon Dev.to
+Este proyecto se realizo con el fin de crear un clon de la página [dev.to](https://dev.to/ "dev.to") aplicando los conocimientos adquiridos durante el modulo de React, tales como:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Vite
+- React
+- React Router
+- React Hook Form
+- Uso de hooks, entre otros
 
-Currently, two official plugins are available:
+El proyecto esta centrado en el funcionamiento las siguientes páginas en base a la web original:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Registro de usuario
+2. Login de usuario
+3. Renderizado de post en home
+4. Detalle de post
+5. Creación de posts
+
+## Instalación
+
+Asegúrate de tener Node.js y npm instalados en tu sistema. Luego, sigue estos pasos:
+
+1. Clona este repositorio:
+
+###### bash
+
+git clone https://github.com/RudyRmz/desafio-react29js
