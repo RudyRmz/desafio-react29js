@@ -1,9 +1,11 @@
 import FormMiddle from "./form-components/FormMiddle";
 import { useForm } from "react-hook-form";
 import opciones from "./../../../assets/opciones.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function FormCreatePost() {
   const token = localStorage.getItem("token");
+  const navigate = useNavigate();
 
   const tokenObjet = () => {
     if (token) {
@@ -54,7 +56,9 @@ export default function FormCreatePost() {
       }),
     });
     const result = await response.json();
-    console.log(result);
+    const idNewPost = result?.data?.post?._id;
+    navigate(`/post-detail/${idNewPost}`);
+    //console.log(result?.data?.post?._id);
   }
 
   return (
