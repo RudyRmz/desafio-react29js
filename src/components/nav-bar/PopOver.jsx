@@ -9,9 +9,8 @@ function classNames(...classes) {
 
 export default function PopOver({ avatar, username, name }) {
   const navigate = useNavigate();
-  const logout = () => {
-    localStorage.removeItem("token");
-    navigate("/");
+  const signout = () => {
+    navigate("/signout-confirm");
   };
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -64,11 +63,11 @@ export default function PopOver({ avatar, username, name }) {
               {({ active }) => (
                 <a
                   onClick={() => {
-                    logout();
+                    signout();
                   }}
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "block px-4 py-2 text-sm cursor-pointer"
                   )}
                 >
                   Sign Out

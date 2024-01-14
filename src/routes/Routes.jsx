@@ -8,6 +8,7 @@ import PostDetail from "../components/post-detail/PostDetail";
 import EnterLogin from "../components/login/EnterLogin";
 import Error404 from "../components/Error404";
 import CreateAccount from "../components/create-account/CreateAccount";
+import SignOut from "../components/signout-confirm/Signout";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/new-user",
     element: <CreateAccount />,
+  },
+  {
+    path: "/signout-confirm",
+    element: <SignOut />,
   },
 ]);
 

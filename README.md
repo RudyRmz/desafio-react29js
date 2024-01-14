@@ -1,4 +1,5 @@
-###Desafío React Kodemia - Clon Dev.to
+### Desafío React Kodemia - Clon Dev.to
+
 Este proyecto se realizo con el fin de crear un clon de la página [dev.to](https://dev.to/ "dev.to") aplicando los conocimientos adquiridos durante el modulo de React, tales como:
 
 - Vite
