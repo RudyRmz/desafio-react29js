@@ -58,7 +58,6 @@ export default function FormCreatePost() {
     const result = await response.json();
     const idNewPost = result?.data?.post?._id;
     navigate(`/post-detail/${idNewPost}`);
-    //console.log(result?.data?.post?._id);
   }
 
   return (
